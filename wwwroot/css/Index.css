@@ -16,11 +16,6 @@ padding: 0;
 overflow: auto;
 scroll-behavior: smooth;
 }
-@media only screen and (min-width: 768px){
-    .container-fluid{
-        overflow: hidden;
-    }
-}
 
 .buttonOn{
     background-color: #2098D1;
@@ -32,17 +27,18 @@ scroll-behavior: smooth;
     height: 40rem;
     border: 3px solid lightblue;
     padding-top: 5%;
-
+    overflow-x: hidden;
+    
 }
-    .jumbotron::-webkit-scrollbar
-    {
-        width: 3px;
-        background-color: #F5F5F5;
-    }
-    .jumbotron::-webkit-scrollbar-thumb
-    {
-        background-color: rgb(153, 153, 153);
-    }
+.jumbotron::-webkit-scrollbar
+{
+    width: 3px;
+    background-color: #F5F5F5;
+}
+.jumbotron::-webkit-scrollbar-thumb
+{
+    background-color: rgb(153, 153, 153);
+}
 .group{
     border: 1px solid lightblue;
     padding: 1rem 2rem;
@@ -73,4 +69,14 @@ h2{
 }
 .logo{
     width: 3%;
+}
+@media only screen and (min-width: 768px){
+    .container-fluid{
+        overflow: hidden;
+    }
+}
+@media only screen and (max-width: 768px){
+    .logo{
+        width: 12%;
+    }
 }
