@@ -1,0 +1,46 @@
+body{
+    background-image: url("../img/dc.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow: hidden;
+}
+.container{
+    color: white !important;
+}
+
+.myName{
+    color: lightyellow;
+    font-weight: 900;
+    padding-top: 27%;
+    padding-bottom: 3%;
+    border-bottom: 3px solid lightyellow;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px black;
+    animation-duration: 2s;
+}
+.lowDesc{
+    color: lightyellow;
+    font-weight: 900;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 2px;
+    margin-bottom: 2%;
+    text-shadow: 1px 1px black;
+    animation-duration: 2s;
+}
+.cont{
+    font-size: x-large;
+    transition: 1s;
+    border: none;
+    padding-bottom: 12px;
+    text-decoration: none !important;
+    transition-duration: 1s;
+}
+    .cont:hover{
+        color: lightyellow;
+    }
+.border-top{
+    border-top: none !important;
+}

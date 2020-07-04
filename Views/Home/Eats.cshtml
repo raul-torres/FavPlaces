@@ -1,0 +1,510 @@
+@* @{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div> *@
+<!DOCTYPE html>
+
+<head>
+    <script src="~/js/EatsMaps.js"></script>
+    <link rel="stylesheet" href="~/css/Index.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVXU0B8VsfbzXeQauqduX50idZofZt7co&callback=initMap&libraries=&v=weekly" defer></script>
+</head>
+
+<h1 class="animate__animated animate__backInLeft display-4 text-center">Good Eats 
+    &nbsp;
+    <img src="~/img/eats.png" alt="Eat Picture" class="logo">
+</h1>
+
+
+<div class="row">
+    <div class="col-sm-4 col-md-4">
+        <div class="jumbotron animate__animated animate__fadeIn">
+            <div class="row" id="top">
+                <div class="col-4">
+                    <p class="text-center">
+                        <a href="/index" class="hvr-bounce-to-bottom animate__animated animate__zoomIn topbtn">Must Visit</a>
+                    </p>
+                </div>
+                <div class="col-4">
+                    <p class="text-center">
+                        <a href="/eats" class="hvr-bounce-to-bottom animate__animated animate__zoomIn topbtn  btn disabled">Good Eats</a>
+                    </p>
+                </div>
+                <div class="col-4">
+                    <p class="text-center">
+                        <a href="/views" class="hvr-bounce-to-bottom animate__animated animate__zoomIn topbtn">Go Explore</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="group" id="Block">
+                <h2>The Block</h2>
+                <p>Food hall with multiple vendors located in Annandale</p>
+                <span>Great if you're looking for:</span>
+                <ul>
+                    <li>Asian Eateries</li>
+                    <li>Ice Cream</li>
+                    <li>Bobba Tea</li>
+                    <li>Bar</li>
+                    <li>Cool Enviorment</li>
+                </ul>
+                <div class="row">
+                    <div class="col-6">
+                        <button class="desktop topbtn btn btn-outline-primary" onclick="tBounceBlock()">View on Map</button>
+                        <a href="#map" class="tView mobile topbtn btn btn-outline-primary" onclick="tBounceBlock()" id="toggleView">View on Map</a>
+                    </div>
+                    <div class="col-6">
+                        <a href="https://www.theblockfoodhall.com/" target="_blank" class="topbtn btn btn-outline-primary">Go to Site</a>
+                    </div>
+                </div>
+            </div>
+            <div class="group" id="First">
+                <h2>First Watch</h2>
+                <p>Breakfast restaurant full of awesome dishes waiting to be tasted. Only open between 7 AM to 2:30 AM (hence the name)</p>
+                <span>Great if you're looking for:</span>
+                <ul>
+                    <li>Breakfast</li>
+                    <li>Coffee</li>
+                    <li>Awesome Customer Service</li>
+                </ul>
+                <div class="row">
+                    <div class="col-6">
+                        <button class="desktop topbtn btn btn-outline-primary" onclick="tBounceFirst()">View on Map</button>
+                        <a href="#map" class="tView mobile topbtn btn btn-outline-primary" onclick="tBounceFirst()" id="toggleView">View on Map</a>
+                    </div>
+                    <div class="col-6">
+                        <a href="https://www.firstwatch.com/" target="_blank" class="topbtn btn btn-outline-primary">Go to Site</a>
+                    </div>
+                </div>
+            </div>
+
+             <div class="group" id="First">
+                <h2>Founding Farmers</h2>
+                <p>Great American food with alot of flavor. Try out their awesome fry chicken and donut (instead of waffle)</p>
+                <span>Great if you're looking for:</span>
+                <ul>
+                    <li>Breakfast</li>
+                    <li>Dinner</li>
+                    <li>Great Ambience</li>
+                </ul>
+                <div class="row">
+                    <div class="col-6">
+                        <button class="desktop topbtn btn btn-outline-primary" onclick="tBounceFoundTy()">View on Map</button>
+                        <a href="#map" class="tView mobile topbtn btn btn-outline-primary" onclick="tBounceFoundTy()" id="toggleView">View on Map</a>
+                    </div>
+                    <div class="col-6">
+                        <a href="https://www.wearefoundingfarmers.com/locations/tysons/" target="_blank" class="topbtn btn btn-outline-primary">Go to Site</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group" id="First">
+                <h2>Super Chicken</h2>
+                <p>Some of the best peruvian chicken I have ever tasted. Order their platanos for an awesome combination</p>
+                <span>Great if you're looking for:</span>
+                <ul>
+                    <li>Chicken</li>
+                    <li>Peruvian Food</li>
+                    <li>Alot of food for a great price</li>
+                </ul>
+                <div class="row">
+                    <div class="col-6">
+                        <button class="desktop topbtn btn btn-outline-primary" onclick="tBounceSuper()">View on Map</button>
+                        <a href="#map" class="tView mobile topbtn btn btn-outline-primary" onclick="tBounceSuper()" id="toggleView">View on Map</a>
+                    </div>
+                    <div class="col-6">
+                        <a href="http://superchickentysons.com/" target="_blank" class="topbtn btn btn-outline-primary">Go to Site</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group" id="First">
+                <h2>Spice 6</h2>
+                <p>Favorite Indian food spot. Some of the best biryani and butter chicken out there.</p>
+                <span>Great if you're looking for:</span>
+                <ul>
+                    <li>Indian Food</li>
+                    <li>Spicy Food</li>
+                    <li>Want to try out Indian food for the first time</li>
+                </ul>
+                <div class="row">
+                    <div class="col-6">
+                        <button class="desktop topbtn btn btn-outline-primary" onclick="tBounceSpice()">View on Map</button>
+                        <a href="#map" class="tView mobile topbtn btn btn-outline-primary" onclick="tBounceSpice()" id="toggleView">View on Map</a>
+                    </div>
+                    <div class="col-6">
+                        <a href="https://www.spice-6.com/" target="_blank" class="topbtn btn btn-outline-primary">Go to Site</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group" id="First">
+                <h2>Ravi Kabob House</h2>
+                <p>Best spot to get Pakistani food. Try the halwa puri for some awesome flavors.</p>
+                <span>Great if you're looking for:</span>
+                <ul>
+                    <li>Pakistani Food</li>
+                    <li>A lot of food for the price</li>
+                    <li>Want a food coma</li>
+                </ul>
+                <div class="row">
+                    <div class="col-6">
+                        <button class="desktop topbtn btn btn-outline-primary" onclick="tBounceRavi()">View on Map</button>
+                        <a href="#map" class="tView mobile topbtn btn btn-outline-primary" onclick="tBounceRavi()" id="toggleView">View on Map</a>
+                    </div>
+                    <div class="col-6">
+                        <a href="#" target="_blank" class="topbtn btn btn-outline-primary disabled">No Website</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group" id="First">
+                <h2>Keren</h2>
+                <p>My favorite spot for Eritrean cuisine. Try any of their combos or their breakfast Entrées</p>
+                <span>Great if you're looking for:</span>
+                <ul>
+                    <li>Eritrean Food</li>
+                    <li>Vegetarian Options</li>
+                    <li>Wanting something new</li>
+                </ul>
+                <div class="row">
+                    <div class="col-6">
+                        <button class="desktop topbtn btn btn-outline-primary" onclick="tBounceKeren()">View on Map</button>
+                        <a href="#map" class="tView mobile topbtn btn btn-outline-primary" onclick="tBounceKeren()" id="toggleView">View on Map</a>
+                    </div>
+                    <div class="col-6">
+                        <a href="http://orderkerencafeandrestaurant.com/" target="_blank" class="topbtn btn btn-outline-primary">Go to Site</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group" id="First">
+                <h2>New Vegan</h2>
+                <p>Best vegan soul food around DC. Try their vegan chicken drummies which taste like real chicken</p>
+                <span>Great if you're looking for:</span>
+                <ul>
+                    <li>Vegan Food</li>
+                    <li>Soul Food</li>
+                    <li>The best mac & cheese</li>
+                </ul>
+                <div class="row">
+                    <div class="col-6">
+                        <button class="desktop topbtn btn btn-outline-primary" onclick="tBounceVegan()">View on Map</button>
+                        <a href="#map" class="tView mobile topbtn btn btn-outline-primary" onclick="tBounceVegan()" id="toggleView">View on Map</a>
+                    </div>
+                    <div class="col-6">
+                        <a href="https://www.ilovenuvegan.com/" target="_blank" class="topbtn btn btn-outline-primary">Go to Site</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group" id="First">
+                <h2>Magnolia Cafe</h2>
+                <p>The cutest desserts, drinks and decorations at any cafe. Try any of their desserts, you will not regret it </p>
+                <span>Great if you're looking for:</span>
+                <ul>
+                    <li>Desserts</li>
+                    <li>Coffee</li>
+                    <li>Not good if you're on a diet</li>
+                </ul>
+                <div class="row">
+                    <div class="col-6">
+                        <button class="desktop topbtn btn btn-outline-primary" onclick="tBounceMagnolia()">View on Map</button>
+                        <a href="#map" class="tView mobile topbtn btn btn-outline-primary" onclick="tBounceMagnolia()" id="toggleView">View on Map</a>
+                    </div>
+                    <div class="col-6">
+                        <a href="http://www.magnoliaofvienna.com/" target="_blank" class="topbtn btn btn-outline-primary">Go to Site</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group" id="First">
+                <h2>Social Burger</h2>
+                <p>Tasty burgers and smoothies. Stop by if you find yourself in the Vienna area</p>
+                <span>Great if you're looking for:</span>
+                <ul>
+                    <li>Burgers</li>
+                    <li>Smoothies</li>
+                    <li>Customer Service</li>
+                </ul>
+                <div class="row">
+                    <div class="col-6">
+                        <button class="desktop topbtn btn btn-outline-primary" onclick="tBounceSocial()">View on Map</button>
+                        <a href="#map" class="tView mobile topbtn btn btn-outline-primary" onclick="tBounceSocial()" id="toggleView">View on Map</a>
+                    </div>
+                    <div class="col-6">
+                        <a href="https://www.mysocialburger.com/" target="_blank" class="topbtn btn btn-outline-primary">Go to Site</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group" id="First">
+                <h2>Teas'n You</h2>
+                <p>Great drinks and spicy snacks. Try their bubble tea and spicy popcorn chicken</p>
+                <span>Great if you're looking for:</span>
+                <ul>
+                    <li>A light snack</li>
+                    <li>Bubble tea</li>
+                    <li>Trendy atmosphere</li>
+                </ul>
+                <div class="row">
+                    <div class="col-6">
+                        <button class="desktop topbtn btn btn-outline-primary" onclick="tBounceTeasN()">View on Map</button>
+                        <a href="#map" class="tView mobile topbtn btn btn-outline-primary" onclick="tBounceTeasN()" id="toggleView">View on Map</a>
+                    </div>
+                    <div class="col-6">
+                        <a href="https://www.toasttab.com/teasnyou/v3" target="_blank" class="topbtn btn btn-outline-primary">Go to Site</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group" id="First">
+                <h2>Buredo</h2>
+                <p>Burrito size sushi rolls. It's a must for any sushi lover</p>
+                <span>Great if you're looking for:</span>
+                <ul>
+                    <li>Sushi</li>
+                    <li>More Sushi</li>
+                    <li>& Cool wallpapers</li>
+                </ul>
+                <div class="row">
+                    <div class="col-6">
+                        <button class="desktop topbtn btn btn-outline-primary" onclick="tBounceBuredo()">View on Map</button>
+                        <a href="#map" class="tView mobile topbtn btn btn-outline-primary" onclick="tBounceBuredo()" id="toggleView">View on Map</a>
+                    </div>
+                    <div class="col-6">
+                        <a href="https://eatburedo.com/" target="_blank" class="topbtn btn btn-outline-primary">Go to Site</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group" id="First">
+                <h2>Hot N Juicy Crawfish</h2>
+                <p>If you find yourself missing New Orleans style crawfish, don't hesitate to come here. Beware your hands will get messy but it's all worth it</p>
+                <span>Great if you're looking for:</span>
+                <ul>
+                    <li>Sea Food</li>
+                    <li>Country Style Crawfish</li>
+                    <li>Miss New Orleans</li>
+                </ul>
+                <div class="row">
+                    <div class="col-6">
+                        <button class="desktop topbtn btn btn-outline-primary" onclick="tBounceHotN()">View on Map</button>
+                        <a href="#map" class="tView mobile topbtn btn btn-outline-primary" onclick="tBounceHotN()" id="toggleView">View on Map</a>
+                    </div>
+                    <div class="col-6">
+                        <a href="http://www.hotnjuicycrawfish.com/" target="_blank" class="topbtn btn btn-outline-primary">Go to Site</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group" id="First">
+                <h2>Cafe Kindred</h2>
+                <p>Cute little cafe located in falls church. Their curry chicken and waffles is something everyone should try</p>
+                <span>Great if you're looking for:</span>
+                <ul>
+                    <li>Coffee</li>
+                    <li>Breakfast</li>
+                    <li>A place to do some work</li>
+                </ul>
+                <div class="row">
+                    <div class="col-6">
+                        <button class="desktop topbtn btn btn-outline-primary" onclick="tBounceKindred()">View on Map</button>
+                        <a href="#map" class="tView mobile topbtn btn btn-outline-primary" onclick="tBounceKindred()" id="toggleView">View on Map</a>
+                    </div>
+                    <div class="col-6">
+                        <a href="http://www.cafekindred.com/" target="_blank" class="topbtn btn btn-outline-primary">Go to Site</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group" id="First">
+                <h2>Taqueria Habanero</h2>
+                <p>Awesome tacos and mexican dishes. Try their tounge tacos if you've never had cow tounge</p>
+                <span>Great if you're looking for:</span>
+                <ul>
+                    <li>Tacos</li>
+                    <li>Mexican Food</li>
+                    <li>Awesome customer service</li>
+                </ul>
+                <div class="row">
+                    <div class="col-6">
+                        <button class="desktop topbtn btn btn-outline-primary" onclick="tBounceHabanero()">View on Map</button>
+                        <a href="#map" class="tView mobile topbtn btn btn-outline-primary" onclick="tBounceHabanero()" id="toggleView">View on Map</a>
+                    </div>
+                    <div class="col-6">
+                        <a href="https://www.habanerodc.com/" target="_blank" class="topbtn btn btn-outline-primary">Go to Site</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group" id="First">
+                <h2>Taqueria La Placita</h2>
+                <p>Another great taco place with a very authentic enviorment. Try all the tacos but also some of the mexican snacks they sell</p>
+                <span>Great if you're looking for:</span>
+                <ul>
+                    <li>Tacos</li>
+                    <li>Mexican Food</li>
+                    <li>Authentic Mexican atmosphere</li>
+                </ul>
+                <div class="row">
+                    <div class="col-6">
+                        <button class="desktop topbtn btn btn-outline-primary" onclick="tBouncePlacita()">View on Map</button>
+                        <a href="#map" class="tView mobile topbtn btn btn-outline-primary" onclick="tBouncePlacita()" id="toggleView">View on Map</a>
+                    </div>
+                    <div class="col-6">
+                        <a href="https://www.firstwatch.com/" target="_blank" class="topbtn btn btn-outline-primary disabled">No Website</a>
+                    </div>
+                </div>
+            </div>
+            <div class="group" id="First">
+                <h2>Ercilias</h2>
+                <p>One of the best Central American restaurants inside DC. Give their pupusas and plantain empanadas a try</p>
+                <span>Great if you're looking for:</span>
+                <ul>
+                    <li>Pupusas</li>
+                    <li>Central American Food</li>
+                    <li>Horchata!!!</li>
+                </ul>
+                <div class="row">
+                    <div class="col-6">
+                        <button class="desktop topbtn btn btn-outline-primary" onclick="tBounceErcilias()">View on Map</button>
+                        <a href="#map" class="tView mobile topbtn btn btn-outline-primary" onclick="tBounceErcilias()" id="toggleView">View on Map</a>
+                    </div>
+                    <div class="col-6">
+                        <a href="https://www.firstwatch.com/" target="_blank" class="topbtn btn btn-outline-primary disabled">No Website</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group" id="First">
+                <h2>Amsterdam Falafelshop</h2>
+                <p>My favorite falafel place in the DMV. You can put on as many toppings as you want so go crazy</p>
+                <span>Great if you're looking for:</span>
+                <ul>
+                    <li>Falafel</li>
+                    <li>Bitcoin Machine</li>
+                    <li>Open late at night</li>
+                </ul>
+                <div class="row">
+                    <div class="col-6">
+                        <button class="desktop topbtn btn btn-outline-primary" onclick="tBounceAmstradam()">View on Map</button>
+                        <a href="#map" class="tView mobile topbtn btn btn-outline-primary" onclick="tBounceAmstradam()" id="toggleView">View on Map</a>
+                    </div>
+                    <div class="col-6">
+                        <a href="https://www.falafelshop.com/" target="_blank" class="topbtn btn btn-outline-primary">Go to Site</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group" id="First">
+                <h2>Jeni's Ice Creams</h2>
+                <p>Really good ice cream located near U street in DC. Try as many flavors as your heart desires</p>
+                <span>Great if you're looking for:</span>
+                <ul>
+                    <li>Ice Cream</li>
+                    <li>Great Customer Service</li>
+                    <li>Trendy Vibes</li>
+                </ul>
+                <div class="row">
+                    <div class="col-6">
+                        <button class="desktop topbtn btn btn-outline-primary" onclick="tBounceJenis()">View on Map</button>
+                        <a href="#map" class="tView mobile topbtn btn btn-outline-primary" onclick="tBounceJenis()" id="toggleView">View on Map</a>
+                    </div>
+                    <div class="col-6">
+                        <a href="https://jenis.com/" target="_blank" class="topbtn btn btn-outline-primary">Go to Site</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group" id="First">
+                <h2>Lauriol Plaza</h2>
+                <p>Very nice mexican restaurant in DC. Try their fajitas and reserve a seat in their roof deck</p>
+                <span>Great if you're looking for:</span>
+                <ul>
+                    <li>Mexican Food</li>
+                    <li>Great View</li>
+                    <li>More upscale restaurant</li>
+                </ul>
+                <div class="row">
+                    <div class="col-6">
+                        <button class="desktop topbtn btn btn-outline-primary" onclick="tBounceLauriel()">View on Map</button>
+                        <a href="#map" class="tView mobile topbtn btn btn-outline-primary" onclick="tBounceLauriel()" id="toggleView">View on Map</a>
+                    </div>
+                    <div class="col-6">
+                        <a href="https://www.lauriolplaza.com/" target="_blank" class="topbtn btn btn-outline-primary">Go to Site</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group" id="First">
+                <h2>Pho Viet</h2>
+                <p>My favorite pho around the DC area. Try their spicy lemongrass (beware it is very spicy)</p>
+                <span>Great if you're looking for:</span>
+                <ul>
+                    <li>vietnamese Food</li>
+                    <li>Pho</li>
+                    <li>Spicy Food</li>
+                </ul>
+                <div class="row">
+                    <div class="col-6">
+                        <button class="desktop topbtn btn btn-outline-primary" onclick="tBounceViet()">View on Map</button>
+                        <a href="#map" class="tView mobile topbtn btn btn-outline-primary" onclick="tBounceViet()" id="toggleView">View on Map</a>
+                    </div>
+                    <div class="col-6">
+                        <a href="http://www.phovietwdc.com/" target="_blank" class="topbtn btn btn-outline-primary">Go to Site</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group" id="First">
+                <h2>Iron Age</h2>
+                <p>My favorite all you can eat Korean barbeque restaurant in the DMV. It's all you can eat so try everything</p>
+                <span>Great if you're looking for:</span>
+                <ul>
+                    <li>Korean barbeque</li>
+                    <li>K-Pop Music</li>
+                    <li>Unique style of restaurant</li>
+                </ul>
+                <div class="row">
+                    <div class="col-6">
+                        <button class="desktop topbtn btn btn-outline-primary" onclick="tBounceIron()">View on Map</button>
+                        <a href="#map" class="mobile bounce-to-right topbtn btn btn-outline-primary" onclick="tBounceIron()">View on Map</a>
+                    </div>
+                    <div class="col-6">
+                        <a href="https://ironagekoreansteakhouse.com/" target="_blank" class="topbtn btn btn-outline-primary">Go to Site</a>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <br>
+            <div class="row" id="top">
+                <div class="col-4">
+                    <p class="text-center">
+                        <a href="/" class="hvr-bounce-to-bottom animate__animated animate__zoomIn topbtn">Must Visit</a>
+                    </p>
+                </div>
+                <div class="col-4">
+                    <p class="text-center">
+                        <a href="/eats" class="hvr-bounce-to-bottom animate__animated animate__zoomIn topbtn  btn disabled">Good Eats</a>
+                    </p>
+                </div>
+                <div class="col-4">
+                    <p class="text-center">
+                        <a href="/views" class="hvr-bounce-to-bottom animate__animated animate__zoomIn topbtn">Go Explore</a>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="col-sm-8 col-md-8">
+        <div id="map" class="animate__animated animate__fadeIn"></div>
+    </div>
+</div>

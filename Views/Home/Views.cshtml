@@ -1,0 +1,292 @@
+@* @{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div> *@
+<!DOCTYPE html>
+
+<head>
+    <script src="~/js/ViewsMaps.js"></script>
+    <link rel="stylesheet" href="~/css/Index.css">
+    <script src="~/js/scroll.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVXU0B8VsfbzXeQauqduX50idZofZt7co&callback=initMap&libraries=&v=weekly" defer></script>
+</head>
+
+<h1 class="animate__animated animate__zoomInDown display-4 text-center">Go Explore
+    &nbsp;
+    <img src="~/img/views.png" alt="Explore Picture" class="logo">
+</h1>
+
+<div class="row">
+    <div class="col-sm-4 col-md-4">
+        <div class="jumbotron">
+            @* Navigation Options *@
+            <div class="row" id="top">
+                <div class="col-4">
+                    <p class="text-center">
+                        <a href="/index" class="hvr-bounce-to-bottom animate__animated animate__zoomIn topbtn">Must Visit</a>
+                    </p>
+                </div>
+                <div class="col-4">
+                    <p class="text-center">
+                        <a href="/eats" class="hvr-bounce-to-bottom animate__animated animate__zoomIn topbtn">Good Eats</a>
+                    </p>
+                </div>
+                <div class="col-4">
+                    <p class="text-center">
+                        <a href="/views" class="hvr-bounce-to-bottom animate__animated animate__zoomIn topbtn  btn disabled">Go Explore</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="group" id="Block">
+                <h2>Mosaic District</h2>
+                <p>Urban shopping center located in Merrifield</p>
+                <span>Some great places here are:</span>
+                <ul>
+                    <li>Angelika Film Center</li>
+                    <li>Choolaah Indian Restaurant</li>
+                    <li>Caboose Commons</li>
+                </ul>
+                <div class="row">
+                    <div class="col-6">
+                        <button class="desktop topbtn btn btn-outline-primary" onclick="tBounceMos()">View on Map</button>
+                        <a href="#map" class="tView mobile topbtn btn btn-outline-primary" onclick="tBounceMos()" id="toggleView">View on Map</a>
+                    </div>
+                    <div class="col-6">
+                        <a href="http://www.mosaicdistrict.com/" target="_blank" class="topbtn btn btn-outline-primary">Go to Site</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group" id="Block">
+                <h2>Georgetown</h2>
+                <p>A historic neighborhood and a commercial and entertainment district located in northwest Washington D.C., situated along the Potomac River.</p>
+                <span>Some great places here are:</span>
+                <ul>
+                    <li>The Georgetown’s waterfront</li>
+                    <li>Walk the Chesapeake and Ohio Canal </li>
+                    <li>Exorcist steps at the corner of 36th and Prospect streets</li>
+                </ul>
+                <div class="row">
+                    <div class="col-6">
+                        <button class="desktop topbtn btn btn-outline-primary" onclick="tBounceGeo()">View on Map</button>
+                        <a href="#map" class="tView mobile topbtn btn btn-outline-primary" onclick="tBounceGeo()" id="toggleView">View on Map</a>
+                    </div>
+                    <div class="col-6">
+                        <a href="https://washington.org/visit-dc/things-see-do-georgetown-washington-dc" target="_blank" class="topbtn btn btn-outline-primary">Go to Site</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group" id="Block">
+                <h2>Adams Morgan</h2>
+                <p>A neighborhood located in 18th Street full of great venues</p>
+                <span>Some great places here are:</span>
+                <ul>
+                    <li>Jumbo Slice Pizza</li>
+                    <li>Al Volo Osteria</li>
+                    <li>Smash Records</li>
+                </ul>
+                <div class="row">
+                    <div class="col-6">
+                        <button class="desktop topbtn btn btn-outline-primary" onclick="tBounceAda()">View on Map</button>
+                        <a href="#map" class="tView mobile topbtn btn btn-outline-primary" onclick="tBounceAda()" id="toggleView">View on Map</a>
+                    </div>
+                    <div class="col-6">
+                        <a href="https://washington.org/visit-dc/things-see-do-georgetown-washington-dc" target="_blank" class="topbtn btn btn-outline-primary">Go to Site</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group" id="Block">
+                <h2>Eden Center</h2>
+                <p>Vietnamese American strip mall located near the crossroads of Seven Corners in the City of Falls Church, Virginia.</p>
+                <span>Some great thing to do:</span>
+                <ul>
+                    <li>Mango Mango Dessert</li>
+                    <li>Rice Paper</li>
+                    <li>TeaDM</li>
+                </ul>
+                <div class="row">
+                    <div class="col-6">
+                        <button class="desktop topbtn btn btn-outline-primary" onclick="tBounceEden()">View on Map</button>
+                        <a href="#map" class="tView mobile topbtn btn btn-outline-primary" onclick="tBounceEden()" id="toggleView">View on Map</a>
+                    </div>
+                    <div class="col-6">
+                        <a href="https://edencenter.com/?utm_source=google&utm_medium=gmb" target="_blank" class="topbtn btn btn-outline-primary">Go to Site</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group" id="Block">
+                <h2>Old Town Alexandria</h2>
+                <p>Historic district along the Potomac filled with awesome places to hang out and great restaurants</p>
+                <span>Some great places here are:</span>
+                <ul>
+                    <li>Visit their farmers market</li>
+                    <li>Walk along the waterfront</li>
+                    <li>View the building's architecture</li>
+                </ul>
+                <div class="row">
+                    <div class="col-6">
+                        <button class="desktop topbtn btn btn-outline-primary" onclick="tBounceOld()">View on Map</button>
+                        <a href="#map" class="tView mobile topbtn btn btn-outline-primary" onclick="tBounceOld()" id="toggleView">View on Map</a>
+                    </div>
+                    <div class="col-6">
+                        <a href="https://www.visitalexandriava.com/old-town-alexandria/" target="_blank" class="topbtn btn btn-outline-primary">Go to Site</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group" id="Block">
+                <h2>Tysons Corner</h2>
+                <p>An urban area located near McLean. Filled with many corporate buildings and plenty of stores</p>
+                <span>Some great places here are:</span>
+                <ul>
+                    <li>Tysons Corner Mall</li>
+                    <li>Tysons Corner Galleria</li>
+                    <li>Whole Foods (Largest Whole Foods in the East Coast)</li>
+                </ul>
+                <div class="row">
+                    <div class="col-6">
+                        <button class="desktop topbtn btn btn-outline-primary" onclick="tBounceTys()">View on Map</button>
+                        <a href="#map" class="tView mobile topbtn btn btn-outline-primary" onclick="tBounceTys()" id="toggleView">View on Map</a>
+                    </div>
+                    <div class="col-6">
+                        <a href="https://www.tysonscornercenter.com/" target="_blank" class="topbtn btn btn-outline-primary">Go to Site</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group" id="Block">
+                <h2>Shenandoah National Park</h2>
+                <p>National Park located south of northern Virginia</p>
+                <span>Some great things to do here are:</span>
+                <ul>
+                    <li>Drive up the Skyline Drive</li>
+                    <li>Go hiking in one of the trails</li>
+                    <li>Grab some great chicken from Raising Cane's Chicken Fingers</li>
+                </ul>
+                <div class="row">
+                    <div class="col-6">
+                        <button class="desktop topbtn btn btn-outline-primary" onclick="tBounceShen()">View on Map</button>
+                        <a href="#map" class="tView mobile topbtn btn btn-outline-primary" onclick="tBounceShen()" id="toggleView">View on Map</a>
+                    </div>
+                    <div class="col-6">
+                        <a href="https://www.nps.gov/shen/index.htm" target="_blank" class="topbtn btn btn-outline-primary">Go to Site</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group" id="Block">
+                <h2>Great Falls Park</h2>
+                <p>Small National Park located along side the Potomac River</p>
+                <span>Some great things to do here are:</span>
+                <ul>
+                    <li>Get some great views of the falls</li>
+                    <li>Hike along the river</li>
+                    <li>Drive around Great Falls to view some of the gorgeous houses/neighborhoods there</li>
+                </ul>
+                <div class="row">
+                    <div class="col-6">
+                        <button class="desktop topbtn btn btn-outline-primary" onclick="tBounceGreat()">View on Map</button>
+                        <a href="#map" class="tView mobile topbtn btn btn-outline-primary" onclick="tBounceGreat()" id="toggleView">View on Map</a>
+                    </div>
+                    <div class="col-6">
+                        <a href="https://www.nps.gov/grfa/index.htm" target="_blank" class="topbtn btn btn-outline-primary">Go to Site</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group" id="Block">
+                <h2>Rock Creek Park</h2>
+                <p>Large urban park that runs along the heart of DC.</p>
+                <span>Some great things to do here are:</span>
+                <ul>
+                    <li>Have a picnic or BBQ</li>
+                    <li>Go for a jog or bike ride</li>
+                    <li>Visit the beautiful bridges</li>
+                </ul>
+                <div class="row">
+                    <div class="col-6">
+                        <button class="desktop topbtn btn btn-outline-primary" onclick="tBounceRock()">View on Map</button>
+                        <a href="#map" class="tView mobile topbtn btn btn-outline-primary" onclick="tBounceRock()" id="toggleView">View on Map</a>
+                    </div>
+                    <div class="col-6">
+                        <a href="https://www.nps.gov/rocr/index.htm" target="_blank" class="topbtn btn btn-outline-primary">Go to Site</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group" id="Block">
+                <h2>Silver Spring</h2>
+                <p>Commercial area full of shops in Maryland</p>
+                <span>Some great things to do here are:</span>
+                <ul>
+                    <li>See a concert at the Fillmore</li>
+                    <li>go Ice Skating in the Winter</li>
+                    <li>Visit their shopping center</li>
+                </ul>
+                <div class="row">
+                    <div class="col-6">
+                        <button class="desktop topbtn btn btn-outline-primary" onclick="tBounceSilver()">View on Map</button>
+                        <a href="#map" class="tView mobile topbtn btn btn-outline-primary" onclick="tBounceSilver()" id="toggleView">View on Map</a>
+                    </div>
+                    <div class="col-6">
+                        <a href="https://www.downtownsilverspring.com/" target="_blank" class="topbtn btn btn-outline-primary">Go to Site</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group" id="Block">
+                <h2>Occoquan Historic District</h2>
+                <p>Small town in Prince William County</p>
+                <span>Some great things to do here are:</span>
+                <ul>
+                    <li>Observe the buildings architecture</li>
+                    <li>Walk along the waterfront</li>
+                    <li>Visit the Mill House Museum</li>
+                </ul>
+                <div class="row">
+                    <div class="col-6">
+                        <button class="desktop topbtn btn btn-outline-primary" onclick="tBounceOcco()">View on Map</button>
+                        <a href="#map" class="tView mobile topbtn btn btn-outline-primary" onclick="tBounceOcco()" id="toggleView">View on Map</a>
+                    </div>
+                    <div class="col-6">
+                        <a href="https://www.visitpwc.com/listing/historic-occoquan/416/" target="_blank" class="topbtn btn btn-outline-primary">Go to Site</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group" id="Block">
+                <h2>Fairfax City</h2>
+                <p>Historic city located in the heart of Fairfax County</p>
+                <span>Some great things to do here are:</span>
+                <ul>
+                    <li>Do an escape room at Room Escape Fairfax</li>
+                    <li>Visit George Mason University</li>
+                    <li>Eat out at one of their restaurants</li>
+                </ul>
+                <div class="row">
+                    <div class="col-6">
+                        <button class="desktop topbtn btn btn-outline-primary" onclick="tBounceFair()">View on Map</button>
+                        <a href="#map" class="tView mobile topbtn btn btn-outline-primary" onclick="tBounceFair()" id="toggleView">View on Map</a>
+                    </div>
+                    <div class="col-6">
+                        <a href="https://www.fairfaxva.gov/" target="_blank" class="topbtn btn btn-outline-primary">Go to Site</a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="col-sm-8 col-md-8">
+        <div id="map"></div>
+    </div>
+</div>

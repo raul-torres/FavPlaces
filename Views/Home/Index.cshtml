@@ -1,0 +1,303 @@
+﻿
+<!DOCTYPE html>
+
+<head>
+    <script src="~/js/IndexMaps.js"></script>
+    <link rel="stylesheet" href="~/css/Index.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVXU0B8VsfbzXeQauqduX50idZofZt7co&callback=initMap&libraries=&v=weekly" defer></script>
+</head>
+
+<h1 class="animate__animated animate__backInDown display-4 text-center">Must Visit
+    &nbsp;
+    <img src="~/img/light.png" alt="Visit Picture" class="logo">
+</h1>
+
+<div class="row">
+    <div class="col-sm-4 col-md-4">
+        <div class="jumbotron">
+            <div class="row" id="top">
+                <div class="col-4">
+                    <p class="text-center">
+                        <a href="/index" class="hvr-bounce-to-bottom animate__animated animate__zoomIn topbtn btn disabled">Must Visit</a>
+                    </p>
+                </div>
+                <div class="col-4">
+                    <p class="text-center">
+                        <a href="/eats" class="hvr-bounce-to-bottom animate__animated animate__zoomIn topbtn">Good Eats</a>
+                    </p>
+                </div>
+                <div class="col-4">
+                    <p class="text-center">
+                        <a href="/views" class="hvr-bounce-to-bottom animate__animated animate__zoomIn topbtn">Go Explore</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="group" id="First">
+                <h2>ARTECHOUSE</h2>
+                <p>Intricate art and technology installations located in DC. Shows change frequently so be sure to check out their website for more information</p>
+                <span>Here's some more info:</span>
+                <ul>
+                    <li>~ $15</li>
+                    <li>Has a bar</li>
+                    <li>Interactive art displays </li>
+                </ul>
+                <div class="row">
+                    <div class="col-6">
+                        <button class="tView desktop topbtn btn btn-outline-primary" onclick="tBounceArtec()" id="toggleView">View on Map</button>
+                        <a href="#map" class="tView mobile topbtn btn btn-outline-primary" onclick="tBounceArtec()" id="toggleView">View on Map</a>
+                        
+                    </div>
+                    <div class="col-6">
+                        <a href="http://artechouse.com/" target="_blank" class="topbtn btn btn-outline-primary">Go to Site</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group">
+                <h2>National Arboretum</h2>
+                <p>Arboretum located in northeast Washington, D.C. Very large area that can take the whole day to explore</p>
+                <span>Here's some more info:</span>
+                <ul>
+                    <li>Free!</li>
+                    <li>Outdoors with plenty of plants and trees</li>
+                    <li>Visit the original National Capital Columns located inside the arboretum </li>
+                </ul>
+                <div class="row">
+                    <div class="col-6">
+                        <button class="tView desktop topbtn btn btn-outline-primary" onclick="tBounceArbo()" id="toggleView">View on Map</button>
+                        <a href="#map" class="tView mobile topbtn btn btn-outline-primary" onclick="tBounceArbo()" id="toggleView">View on Map</a>
+                    </div>
+                    <div class="col-6">
+                        <a href="http://www.usna.usda.gov/" target="_blank" class="topbtn btn btn-outline-primary">Go to Site</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group">
+                <h2>Hirshhorn Museum</h2>
+                <p>Contemporary art museum in the heart of DC. Awesome for any art lover</p>
+                <span>Here's some more info:</span>
+                <ul>
+                    <li>Free!</li>
+                    <li>Great for all ages</li>
+                    <li>Exhibits change so be sure to visit their website</li>
+                </ul>
+                <div class="row">
+                    <div class="col-6">
+                        <button class="tView desktop topbtn btn btn-outline-primary" onclick="tBounceHirsh()" id="toggleView">View on Map</button>
+                        <a href="#map" class="tView mobile topbtn btn btn-outline-primary" onclick="tBounceHirsh()" id="toggleView">View on Map</a>
+                    </div>
+                    <div class="col-6">
+                        <a href="http://www.usna.usda.gov/" target="_blank" class="topbtn btn btn-outline-primary">Go to Site</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group">
+                <h2>Washington National Cathedral</h2>
+                <p>An American cathedral of the Episcopal Church. Huge church that stands out in DC's skyline</p>
+                <span>Here's some more info:</span>
+                <ul>
+                    <li>~ $22</li>
+                    <li>There is an option for a guided tour (but for the adventurous type you can explore on your own)</li>
+                    <li>Be sure to view their beautiful gardern</li>
+                </ul>
+                <div class="row">
+                    <div class="col-6">
+                        <button class="tView desktop topbtn btn btn-outline-primary" onclick="tBounceCath()" id="toggleView">View on Map</button>
+                        <a href="#map" class="tView mobile topbtn btn btn-outline-primary" onclick="tBounceCath()" id="toggleView">View on Map</a>
+                    </div>
+                    <div class="col-6">
+                        <a href="https://cathedral.org/" target="_blank" class="topbtn btn btn-outline-primary">Go to Site</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group">
+                <h2>Sky Zone</h2>
+                <p>Indoor trampoline park located in Springfield VA. Go bounce around or play some dodgeball</p>
+                <span>Here's some more info:</span>
+                <ul>
+                    <li>Starts ~ $18</li>
+                    <li>Try to do a flip</li>
+                    <li>Bring your friends</li>
+                </ul>
+                <div class="row">
+                    <div class="col-6">
+                        <button class="tView desktop topbtn btn btn-outline-primary" onclick="tBounceSky()" id="toggleView">View on Map</button>
+                        <a href="#map" class="tView mobile topbtn btn btn-outline-primary" onclick="tBounceSky()" id="toggleView">View on Map</a>
+                    </div>
+                    <div class="col-6">
+                        <a href="https://www.skyzone.com/" target="_blank" class="topbtn btn btn-outline-primary">Go to Site</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group">
+                <h2>iFLY</h2>
+                <p>Indoor sky diving located in Loudoun VA. Experience sky diving without the fear of heights</p>
+                <span>Here's some more info:</span>
+                <ul>
+                    <li>Starts ~ $80</li>
+                    <li>Very high wind</li>
+                    <li>The better you do the more stunts the instructors will teach you</li>
+                </ul>
+                <div class="row">
+                    <div class="col-6">
+                        <button class="tView desktop topbtn btn btn-outline-primary" onclick="tBounceIfly()" id="toggleView">View on Map</button>
+                        <a href="#map" class="tView mobile topbtn btn btn-outline-primary" onclick="tBounceIfly()" id="toggleView">View on Map</a>
+                    </div>
+                    <div class="col-6">
+                        <a href="http://www.iflyworld.com/loudoun" target="_blank" class="topbtn btn btn-outline-primary">Go to Site</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group">
+                <h2>Go Ape Zipline & Adventure Park</h2>
+                <p>Adventure-activity chain venue where groups explore the forest canopy via a treetop rope course. Awesome for getting over your fear of heights</p>
+                <span>Here's some more info:</span>
+                <ul>
+                    <li>Starts ~ $60</li>
+                    <li>Fun ziplines</li>
+                    <li>Secure your phones!</li>
+                </ul>
+                <div class="row">
+                    <div class="col-6">
+                        <button class="tView desktop topbtn btn btn-outline-primary" onclick="tBounceApe()" id="toggleView">View on Map</button>
+                        <a href="#map" class="tView mobile topbtn btn btn-outline-primary" onclick="tBounceApe()" id="toggleView">View on Map</a>
+                    </div>
+                    <div class="col-6">
+                        <a href="https://www.goape.com/location/virginia-springfield/" target="_blank" class="topbtn btn btn-outline-primary">Go to Site</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group">
+                <h2>Smithsonian National Air and Space Museum</h2>
+                <p>The first ever museum I visited. Mind blowing airplanes and spaceships</p>
+                <span>Here's some more info:</span>
+                <ul>
+                    <li>Free!</li>
+                    <li>Visit their Airbus IMAX Theater</li>
+                    <li>Also visit their Chantilly hanger</li>
+                </ul>
+                <div class="row">
+                    <div class="col-6">
+                        <button class="tView desktop topbtn btn btn-outline-primary" onclick="tBounceAir()" id="toggleView">View on Map</button>
+                        <a href="#map" class="tView mobile topbtn btn btn-outline-primary" onclick="tBounceAir()" id="toggleView">View on Map</a>
+                    </div>
+                    <div class="col-6">
+                        <a href="https://airandspace.si.edu/" target="_blank" class="topbtn btn btn-outline-primary">Go to Site</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group">
+                <h2>The Mansion on O & O Street Museum</h2>
+                <p>Historical landmark/hotel located in Dupont Circle DC. Three connected row houses with plenty to explore</p>
+                <span>Here's some more info:</span>
+                <ul>
+                    <li>Starts ~ $25</li>
+                    <li>Plenty of secret entrances and passages</li>
+                    <li>Bar located inside the mansion</li>
+                </ul>
+                <div class="row">
+                    <div class="col-6">
+                        <button class="tView desktop topbtn btn btn-outline-primary" onclick="tBounceMansion()" id="toggleView">View on Map</button>
+                        <a href="#map" class="tView mobile topbtn btn btn-outline-primary" onclick="tBounceMansion()" id="toggleView">View on Map</a>
+                    </div>
+                    <div class="col-6">
+                        <a href="https://omuseum.org/" target="_blank" class="topbtn btn btn-outline-primary">Go to Site</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group">
+                <h2>Crumbs & Whiskers</h2>
+                <p>Do you like cats? Visit this cat cafe for your daily dose of felines</p>
+                <span>Here's some more info:</span>
+                <ul>
+                    <li>Starts ~ $18</li>
+                    <li>Cats are everywhere and can be adopted</li>
+                    <li>You can also order coffee while playing with the cats</li>
+                </ul>
+                <div class="row">
+                    <div class="col-6">
+                        <button class="tView desktop topbtn btn btn-outline-primary" onclick="tBounceCrum()" id="toggleView">View on Map</button>
+                        <a href="#map" class="tView mobile topbtn btn btn-outline-primary" onclick="tBounceCrum()" id="toggleView">View on Map</a>
+                    </div>
+                    <div class="col-6">
+                        <a href="http://www.crumbsandwhiskers.com/" target="_blank" class="topbtn btn btn-outline-primary">Go to Site</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group">
+                <h2>Renwick Gallery of the Smithsonian American Art Museum</h2>
+                <p>A branch of the Smithsonian American Art Museum located in downtown DC. Plenty of art sculptures and installations</p>
+                <span>Here's some more info:</span>
+                <ul>
+                    <li>Free!</li>
+                    <li>Visit their open room</li>
+                    <li>Installations change so be sure to check out their website</li>
+                </ul>
+                <div class="row">
+                    <div class="col-6">
+                        <button class="tView desktop topbtn btn btn-outline-primary" onclick="tBounceRen()" id="toggleView">View on Map</button>
+                        <a href="#map" class="tView mobile topbtn btn btn-outline-primary" onclick="tBounceRen()" id="toggleView">View on Map</a>
+                    </div>
+                    <div class="col-6">
+                        <a href="https://americanart.si.edu/visit/renwick" target="_blank" class="topbtn btn btn-outline-primary">Go to Site</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group">
+                <h2>Autobahn Indoor Speedway</h2>
+                <p>High speed indoor go karting. Drift around the tracks and race</p>
+                <span>Here's some more info:</span>
+                <ul>
+                    <li>Starts ~ $38</li>
+                    <li>Yes, you can drift in these go karts</li>
+                    <li>Crashing can hurt a bit depending on your speed</li>
+                </ul>
+                <div class="row">
+                    <div class="col-6">
+                        <button class="tView desktop topbtn btn btn-outline-primary" onclick="tBounceAuto()" id="toggleView">View on Map</button>
+                        <a href="#map" class="tView mobile topbtn btn btn-outline-primary" onclick="tBounceAuto()" id="toggleView">View on Map</a>
+                    </div>
+                    <div class="col-6">
+                        <a href="https://autobahnspeed.com/" target="_blank" class="topbtn btn btn-outline-primary">Go to Site</a>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <br>
+            <div class="row" id="top">
+                <div class="col-4">
+                    <p class="text-center">
+                        <a href="/" class="hvr-bounce-to-bottom animate__animated animate__zoomIn topbtn btn disabled">Must Visit</a>
+                    </p>
+                </div>
+                <div class="col-4">
+                    <p class="text-center">
+                        <a href="/eats" class="hvr-bounce-to-bottom animate__animated animate__zoomIn topbtn">Good Eats</a>
+                    </p>
+                </div>
+                <div class="col-4">
+                    <p class="text-center">
+                        <a href="/views" class="hvr-bounce-to-bottom animate__animated animate__zoomIn topbtn">Go Explore</a>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="col-sm-8 col-md-8">
+        <div id="map" class=" animate__animated animate__fadeIn"></div>
+    </div>
+</div>

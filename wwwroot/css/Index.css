@@ -1,0 +1,76 @@
+/* Always set the map height explicitly to define the size of the div
+* element that contains the map. */
+#map {
+height: 40rem;
+width: 100%;
+border: 3px solid lightblue;
+border-radius: 1%;
+}
+
+/* Optional: Makes the sample page fill the window. */
+html,
+body {
+height: 100%;
+margin: 0;
+padding: 0;
+overflow: auto;
+scroll-behavior: smooth;
+}
+@media only screen and (min-width: 768px){
+    .container-fluid{
+        overflow: hidden;
+    }
+}
+
+.buttonOn{
+    background-color: #2098D1;
+    color: white;
+}
+
+.jumbotron{
+    overflow-y: auto;
+    height: 40rem;
+    border: 3px solid lightblue;
+    padding-top: 5%;
+
+}
+    .jumbotron::-webkit-scrollbar
+    {
+        width: 3px;
+        background-color: #F5F5F5;
+    }
+    .jumbotron::-webkit-scrollbar-thumb
+    {
+        background-color: rgb(153, 153, 153);
+    }
+.group{
+    border: 1px solid lightblue;
+    padding: 1rem 2rem;
+    padding-top: 0;
+    border-radius: 2%;
+    background-color: whitesmoke;
+    margin-top: 5%;
+}
+.topbtn{
+    width: 100%;
+    transition: 0.7s;
+}
+.gm-style-iw, .gm-style{
+    font-family: 'Lato', sans-serif;
+}
+.heading{
+    background-color: whitesmoke;
+}
+.animate__animated{
+    animation-duration: 3s;
+}
+h2{
+    margin-top: 1em ;
+}
+.disabled{
+    color: black;
+    background-color: #2098D1;
+}
+.logo{
+    width: 3%;
+}
