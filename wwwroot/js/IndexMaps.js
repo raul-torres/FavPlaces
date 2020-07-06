@@ -229,221 +229,241 @@ function initMap() {
 
 var zoomLevel;
 
+// Function Controlling Smooth Zoom
+function smoothZoom (map, max, cnt) {
+  if (cnt >= max) {
+      return;
+  }
+  else {
+      z = google.maps.event.addListener(map, 'zoom_changed', function(event){
+          google.maps.event.removeListener(z);
+          smoothZoom(map, max, cnt + 1);
+      });
+      setTimeout(function(){map.setZoom(cnt)}, 80);
+  }
+};
+
+// Function for reseting all of the bounce Animation
+function resetBounce() {
+  markerArtec.setAnimation(null);
+  markerArbo.setAnimation(null);
+  markerHirsh.setAnimation(null);
+  markerCath.setAnimation(null);
+  markerSky.setAnimation(null);
+  markerIfly.setAnimation(null);
+  markerApe.setAnimation(null);
+  markerAir.setAnimation(null);
+  markerMansion.setAnimation(null);
+  markerCrum.setAnimation(null);
+  markerRen.setAnimation(null);
+  markerAuto.setAnimation(null);
+}
+
 function tBounceArtec() {
+  markerArtec.setAnimation(google.maps.Animation.BOUNCE);
   zoomLevel = map.getZoom();
   if (zoomLevel <= 11) {
-    map.panTo(markerArtec.getPosition());
-    map.setZoom(17);
+    map.setCenter(markerArtec.getPosition());
+    smoothZoom(map, 17, map.getZoom());
     map.setMapTypeId('satellite');
   } else {
-    var center = new google.maps.LatLng(38.8951111, -77.0363693);
-    map.setCenter(center);
+    map.setCenter(markerArtec.getPosition());
     map.setZoom(11);
-    map.setMapTypeId('roadmap');      
-  }
-  if (markerArtec.getAnimation() !== null) {
-    markerArtec.setAnimation(null);
-  } else {
-    markerArtec.setAnimation(google.maps.Animation.BOUNCE);
+    map.setMapTypeId('roadmap');
+    setTimeout(function () {
+      smoothZoom(map, 17, map.getZoom());
+      map.setMapTypeId('satellite');
+    }, 2000);
   }
 };
-function tBounceArbo() {
-  zoomLevel = map.getZoom();
-  if (zoomLevel <= 11) {
-    map.panTo(markerArbo.getPosition());
-    map.setZoom(17);
-    map.setMapTypeId('satellite');
-  } else {
-    var center = new google.maps.LatLng(38.8951111, -77.0363693);
-    map.setCenter(center);
-    map.setZoom(11);
-    map.setMapTypeId('roadmap');      
-  };
-  if (markerArbo.getAnimation() !== null) {
-      markerArbo.setAnimation(null);
-  } else {
-      markerArbo.setAnimation(google.maps.Animation.BOUNCE);
-  }
-};
-function tBounceHirsh() {
-  zoomLevel = map.getZoom();
-  if (zoomLevel <= 11) {
-    map.panTo(markerHirsh.getPosition());
-    map.setZoom(17);
-    map.setMapTypeId('satellite');
-  } else {
-    var center = new google.maps.LatLng(38.8951111, -77.0363693);
-    map.setCenter(center);
-    map.setZoom(11);
-    map.setMapTypeId('roadmap');      
-  };
-  if (markerHirsh.getAnimation() !== null) {
-      markerHirsh.setAnimation(null);
-  } else {
-      markerHirsh.setAnimation(google.maps.Animation.BOUNCE);
-  }
-};
-function tBounceCath() {
-  zoomLevel = map.getZoom();
-  if (zoomLevel <= 11) {
-    map.panTo(markerCath.getPosition());
-    map.setZoom(17);
-    map.setMapTypeId('satellite');
-  } else {
-    var center = new google.maps.LatLng(38.8951111, -77.0363693);
-    map.setCenter(center);
-    map.setZoom(11);
-    map.setMapTypeId('roadmap');      
-  };
-  if (markerCath.getAnimation() !== null) {
-      markerCath.setAnimation(null);
-  } else {
-      markerCath.setAnimation(google.maps.Animation.BOUNCE);
-  }
-};
+
 function tBounceSky() {
+  markerSky.setAnimation(google.maps.Animation.BOUNCE);
   zoomLevel = map.getZoom();
   if (zoomLevel <= 11) {
     map.panTo(markerSky.getPosition());
     map.setZoom(17);
     map.setMapTypeId('satellite');
   } else {
-    var center = new google.maps.LatLng(38.8951111, -77.0363693);
-    map.setCenter(center);
+    map.setCenter(markerSky.getPosition());
+    map.setZoom(11);
+    map.setMapTypeId('roadmap');
+    
+    setTimeout(function () {
+      smoothZoom(map, 17, map.getZoom());
+      map.setMapTypeId('satellite');
+    }, 2000);
+  };
+};
+function tBounceArbo() {
+  markerArbo.setAnimation(google.maps.Animation.BOUNCE);
+  zoomLevel = map.getZoom();
+  if (zoomLevel <= 11) {
+    map.panTo(markerArbo.getPosition());
+    map.setZoom(17);
+    map.setMapTypeId('satellite');
+  } else {
+    map.setCenter(markerArbo.getPosition());
     map.setZoom(11);
     map.setMapTypeId('roadmap');      
+    setTimeout(function () {
+      smoothZoom(map, 17, map.getZoom());
+      map.setMapTypeId('satellite');
+    }, 2000);
   };
-  if (markerSky.getAnimation() !== null) {
-      markerSky.setAnimation(null);
+};
+function tBounceHirsh() {
+  markerHirsh.setAnimation(google.maps.Animation.BOUNCE);
+  zoomLevel = map.getZoom();
+  if (zoomLevel <= 11) {
+    map.panTo(markerHirsh.getPosition());
+    map.setZoom(17);
+    map.setMapTypeId('satellite');
   } else {
-      markerSky.setAnimation(google.maps.Animation.BOUNCE);
-  }
+    map.setCenter(markerHirsh.getPosition());
+    map.setZoom(11);
+    map.setMapTypeId('roadmap');      
+    setTimeout(function () {
+      smoothZoom(map, 17, map.getZoom());
+      map.setMapTypeId('satellite');
+    }, 2000);
+  };
+};
+function tBounceCath() {
+  markerCath.setAnimation(google.maps.Animation.BOUNCE);
+  zoomLevel = map.getZoom();
+  if (zoomLevel <= 11) {
+    map.panTo(markerCath.getPosition());
+    map.setZoom(17);
+    map.setMapTypeId('satellite');
+  } else {
+    map.setCenter(markerCath.getPosition());
+    map.setZoom(11);
+    map.setMapTypeId('roadmap');      
+    setTimeout(function () {
+      smoothZoom(map, 17, map.getZoom());
+      map.setMapTypeId('satellite');
+    }, 2000);
+  };
 };
 function tBounceIfly() {
+  markerIfly.setAnimation(google.maps.Animation.BOUNCE);
   zoomLevel = map.getZoom();
   if (zoomLevel <= 11) {
     map.panTo(markerIfly.getPosition());
     map.setZoom(17);
     map.setMapTypeId('satellite');
   } else {
-    var center = new google.maps.LatLng(38.8951111, -77.0363693);
-    map.setCenter(center);
+    map.setCenter(markerIfly.getPosition());
     map.setZoom(11);
     map.setMapTypeId('roadmap');      
+    setTimeout(function () {
+      smoothZoom(map, 17, map.getZoom());
+      map.setMapTypeId('satellite');
+    }, 2000);
   };
-  if (markerIfly.getAnimation() !== null) {
-      markerIfly.setAnimation(null);
-  } else {
-      markerIfly.setAnimation(google.maps.Animation.BOUNCE);
-  }
 };
 function tBounceApe() {
+  markerApe.setAnimation(google.maps.Animation.BOUNCE);
   zoomLevel = map.getZoom();
   if (zoomLevel <= 11) {
     map.panTo(markerApe.getPosition());
     map.setZoom(17);
     map.setMapTypeId('satellite');
   } else {
-    var center = new google.maps.LatLng(38.8951111, -77.0363693);
-    map.setCenter(center);
+    map.setCenter(markerApe.getPosition());
     map.setZoom(11);
     map.setMapTypeId('roadmap');      
+    setTimeout(function () {
+      smoothZoom(map, 17, map.getZoom());
+      map.setMapTypeId('satellite');
+    }, 2000);
   };
-  if (markerApe.getAnimation() !== null) {
-      markerApe.setAnimation(null);
-  } else {
-      markerApe.setAnimation(google.maps.Animation.BOUNCE);
-  }
 };
 function tBounceAir() {
+  markerAir.setAnimation(google.maps.Animation.BOUNCE);
   zoomLevel = map.getZoom();
   if (zoomLevel <= 11) {
     map.panTo(markerAir.getPosition());
     map.setZoom(17);
     map.setMapTypeId('satellite');
   } else {
-    var center = new google.maps.LatLng(38.8951111, -77.0363693);
-    map.setCenter(center);
+    map.setCenter(markerAir.getPosition());
     map.setZoom(11);
     map.setMapTypeId('roadmap');      
+    setTimeout(function () {
+      smoothZoom(map, 17, map.getZoom());
+      map.setMapTypeId('satellite');
+    }, 2000);
   };
-  if (markerAir.getAnimation() !== null) {
-      markerAir.setAnimation(null);
-  } else {
-      markerAir.setAnimation(google.maps.Animation.BOUNCE);
-  }
 };
 function tBounceMansion() {
+  markerMansion.setAnimation(google.maps.Animation.BOUNCE);
   zoomLevel = map.getZoom();
   if (zoomLevel <= 11) {
     map.panTo(markerMansion.getPosition());
     map.setZoom(17);
     map.setMapTypeId('satellite');
   } else {
-    var center = new google.maps.LatLng(38.8951111, -77.0363693);
-    map.setCenter(center);
+    map.setCenter(markerMansion.getPosition());
     map.setZoom(11);
     map.setMapTypeId('roadmap');      
+    setTimeout(function () {
+      smoothZoom(map, 17, map.getZoom());
+      map.setMapTypeId('satellite');
+    }, 2000);
   };
-  if (markerMansion.getAnimation() !== null) {
-      markerMansion.setAnimation(null);
-  } else {
-      markerMansion.setAnimation(google.maps.Animation.BOUNCE);
-  }
 };
 function tBounceCrum() {
+  markerCrum.setAnimation(google.maps.Animation.BOUNCE);
   zoomLevel = map.getZoom();
   if (zoomLevel <= 11) {
     map.panTo(markerCrum.getPosition());
     map.setZoom(17);
     map.setMapTypeId('satellite');
   } else {
-    var center = new google.maps.LatLng(38.8951111, -77.0363693);
-    map.setCenter(center);
+    map.setCenter(markerCrum.getPosition());
     map.setZoom(11);
     map.setMapTypeId('roadmap');      
+    setTimeout(function () {
+      smoothZoom(map, 17, map.getZoom());
+      map.setMapTypeId('satellite');
+    }, 2000);
   };
-  if (markerCrum.getAnimation() !== null) {
-      markerCrum.setAnimation(null);
-  } else {
-      markerCrum.setAnimation(google.maps.Animation.BOUNCE);
-  }
 };
 function tBounceRen() {
+  markerRen.setAnimation(google.maps.Animation.BOUNCE);
   zoomLevel = map.getZoom();
   if (zoomLevel <= 11) {
     map.panTo(markerRen.getPosition());
     map.setZoom(17);
     map.setMapTypeId('satellite');
   } else {
-    var center = new google.maps.LatLng(38.8951111, -77.0363693);
-    map.setCenter(center);
+    map.setCenter(markerRen.getPosition());
     map.setZoom(11);
     map.setMapTypeId('roadmap');      
+    setTimeout(function () {
+      smoothZoom(map, 17, map.getZoom());
+      map.setMapTypeId('satellite');
+    }, 2000);
   };
-  if (markerRen.getAnimation() !== null) {
-      markerRen.setAnimation(null);
-  } else {
-      markerRen.setAnimation(google.maps.Animation.BOUNCE);
-  }
 };
 function tBounceAuto() {
+  markerAuto.setAnimation(google.maps.Animation.BOUNCE);
   zoomLevel = map.getZoom();
   if (zoomLevel <= 11) {
     map.panTo(markerAuto.getPosition());
     map.setZoom(17);
     map.setMapTypeId('satellite');
   } else {
-    var center = new google.maps.LatLng(38.8951111, -77.0363693);
-    map.setCenter(center);
+    map.setCenter(markerAuto.getPosition());
     map.setZoom(11);
     map.setMapTypeId('roadmap');      
+    setTimeout(function () {
+      smoothZoom(map, 17, map.getZoom());
+      map.setMapTypeId('satellite');
+    }, 2000);
   };
-  if (markerAuto.getAnimation() !== null) {
-    markerAuto.setAnimation(null);
-  } else {
-    markerAuto.setAnimation(google.maps.Animation.BOUNCE);
-  }
 };
 
 

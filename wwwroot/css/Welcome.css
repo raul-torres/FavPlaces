@@ -37,6 +37,7 @@ body{
     padding-bottom: 12px;
     text-decoration: none !important;
     transition-duration: 1s;
+    color: lightyellow;
 }
     .cont:hover{
         color: lightyellow;
