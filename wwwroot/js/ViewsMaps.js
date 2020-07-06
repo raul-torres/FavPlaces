@@ -257,7 +257,7 @@ function tBounceMos() {
     setTimeout(function () {
       smoothZoom(map, 17, map.getZoom());
       map.setMapTypeId('satellite');
-    }, 2000);
+    }, 1000);
   }
 };
 function tBounceGeo() {
@@ -274,7 +274,7 @@ function tBounceGeo() {
     setTimeout(function () {
       smoothZoom(map, 17, map.getZoom());
       map.setMapTypeId('satellite');
-    }, 2000);
+    }, 1000);
   }
 };
 function tBounceAda() {
@@ -291,7 +291,7 @@ function tBounceAda() {
     setTimeout(function () {
       smoothZoom(map, 17, map.getZoom());
       map.setMapTypeId('satellite');
-    }, 2000);
+    }, 1000);
   }
 };
 function tBounceEden() {
@@ -308,7 +308,7 @@ function tBounceEden() {
     setTimeout(function () {
       smoothZoom(map, 17, map.getZoom());
       map.setMapTypeId('satellite');
-    }, 2000);
+    }, 1000);
   }
 };
 function tBounceOld() {
@@ -325,7 +325,7 @@ function tBounceOld() {
     setTimeout(function () {
       smoothZoom(map, 17, map.getZoom());
       map.setMapTypeId('satellite');
-    }, 2000);
+    }, 1000);
   }
 };
 function tBounceTys() {
@@ -342,7 +342,7 @@ function tBounceTys() {
     setTimeout(function () {
       smoothZoom(map, 17, map.getZoom());
       map.setMapTypeId('satellite');
-    }, 2000);
+    }, 1000);
   }
 };
 function tBounceShen() {
@@ -359,7 +359,7 @@ function tBounceShen() {
     setTimeout(function () {
       smoothZoom(map, 17, map.getZoom());
       map.setMapTypeId('satellite');
-    }, 2000);
+    }, 1000);
   }
 };
 function tBounceGreat() {
@@ -376,7 +376,7 @@ function tBounceGreat() {
     setTimeout(function () {
       smoothZoom(map, 17, map.getZoom());
       map.setMapTypeId('satellite');
-    }, 2000);
+    }, 1000);
   }
 };
 function tBounceRock() {
@@ -393,7 +393,7 @@ function tBounceRock() {
     setTimeout(function () {
       smoothZoom(map, 17, map.getZoom());
       map.setMapTypeId('satellite');
-    }, 2000);
+    }, 1000);
   }
 };
 function tBounceSilver() {
@@ -410,7 +410,7 @@ function tBounceSilver() {
     setTimeout(function () {
       smoothZoom(map, 17, map.getZoom());
       map.setMapTypeId('satellite');
-    }, 2000);
+    }, 1000);
   }
 };
 function tBounceOcco() {
@@ -427,7 +427,7 @@ function tBounceOcco() {
     setTimeout(function () {
       smoothZoom(map, 17, map.getZoom());
       map.setMapTypeId('satellite');
-    }, 2000);
+    }, 1000);
   }
 };
 function tBounceFair() {
@@ -444,7 +444,7 @@ function tBounceFair() {
     setTimeout(function () {
       smoothZoom(map, 17, map.getZoom());
       map.setMapTypeId('satellite');
-    }, 2000);
+    }, 1000);
   }
 };
 
