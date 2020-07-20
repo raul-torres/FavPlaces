@@ -2,8 +2,9 @@
 <!DOCTYPE html>
 
 <head>
-    <script src="~/js/IndexMaps.js"></script>
     <link rel="stylesheet" href="~/css/Index.css">
+    <link rel="stylesheet" href="~/css/Ind.css">
+
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVXU0B8VsfbzXeQauqduX50idZofZt7co&callback=initMap&libraries=&v=weekly" defer></script>
 </head>
@@ -13,8 +14,8 @@
     <img src="~/img/light.png" alt="Visit Picture" class="logo">
 </h1>
 
-<div class="row">
-    <div class="col-sm-4 col-md-4">
+<div class="row mainRow">
+    <div class="col-sm-7 col-md-7">
         <div class="jumbotron">
             <div class="row" id="top">
                 <div class="col-4">
@@ -34,7 +35,7 @@
                 </div>
             </div>
 
-            <div class="group" id="First">
+            <div class="group" id="ART">
                 <h2>ARTECHOUSE</h2>
                 <p>Intricate art and technology installations located in DC. Shows change frequently so be sure to check out their website for more information</p>
                 <span>Here's some more info:</span>
@@ -55,7 +56,7 @@
                 </div>
             </div>
 
-            <div class="group">
+            <div class="group" id="NAT">
                 <h2>National Arboretum</h2>
                 <p>Arboretum located in northeast Washington, D.C. Very large area that can take the whole day to explore</p>
                 <span>Here's some more info:</span>
@@ -75,7 +76,7 @@
                 </div>
             </div>
 
-            <div class="group">
+            <div class="group" id="HISH">
                 <h2>Hirshhorn Museum</h2>
                 <p>Contemporary art museum in the heart of DC. Awesome for any art lover</p>
                 <span>Here's some more info:</span>
@@ -95,7 +96,7 @@
                 </div>
             </div>
 
-            <div class="group">
+            <div class="group" id="CATH">
                 <h2>Washington National Cathedral</h2>
                 <p>An American cathedral of the Episcopal Church. Huge church that stands out in DC's skyline</p>
                 <span>Here's some more info:</span>
@@ -115,7 +116,7 @@
                 </div>
             </div>
 
-            <div class="group">
+            <div class="group" id="SKY">
                 <h2>Sky Zone</h2>
                 <p>Indoor trampoline park located in Springfield VA. Go bounce around or play some dodgeball</p>
                 <span>Here's some more info:</span>
@@ -135,7 +136,7 @@
                 </div>
             </div>
 
-            <div class="group">
+            <div class="group" id="IFLY">
                 <h2>iFLY</h2>
                 <p>Indoor sky diving located in Loudoun VA. Experience sky diving without the fear of heights</p>
                 <span>Here's some more info:</span>
@@ -155,7 +156,7 @@
                 </div>
             </div>
 
-            <div class="group">
+            <div class="group" id="APE">
                 <h2>Go Ape Zipline & Adventure Park</h2>
                 <p>Adventure-activity chain venue where groups explore the forest canopy via a treetop rope course. Awesome for getting over your fear of heights</p>
                 <span>Here's some more info:</span>
@@ -175,7 +176,7 @@
                 </div>
             </div>
 
-            <div class="group">
+            <div class="group" id="AIR">
                 <h2>Smithsonian National Air and Space Museum</h2>
                 <p>The first ever museum I visited. Mind blowing airplanes and spaceships</p>
                 <span>Here's some more info:</span>
@@ -195,7 +196,7 @@
                 </div>
             </div>
 
-            <div class="group">
+            <div class="group" id="MANS">
                 <h2>The Mansion on O & O Street Museum</h2>
                 <p>Historical landmark/hotel located in Dupont Circle DC. Three connected row houses with plenty to explore</p>
                 <span>Here's some more info:</span>
@@ -215,7 +216,7 @@
                 </div>
             </div>
 
-            <div class="group">
+            <div class="group" id="CRUMB">
                 <h2>Crumbs & Whiskers</h2>
                 <p>Do you like cats? Visit this cat cafe for your daily dose of felines</p>
                 <span>Here's some more info:</span>
@@ -235,7 +236,7 @@
                 </div>
             </div>
 
-            <div class="group">
+            <div class="group" id="REN">
                 <h2>Renwick Gallery of the Smithsonian American Art Museum</h2>
                 <p>A branch of the Smithsonian American Art Museum located in downtown DC. Plenty of art sculptures and installations</p>
                 <span>Here's some more info:</span>
@@ -255,7 +256,7 @@
                 </div>
             </div>
 
-            <div class="group">
+            <div class="group" id="AUTO">
                 <h2>Autobahn Indoor Speedway</h2>
                 <p>High speed indoor go karting. Drift around the tracks and race</p>
                 <span>Here's some more info:</span>
@@ -297,7 +298,10 @@
 
         </div>
     </div>
-    <div class="col-sm-8 col-md-8">
+    <div class="col-sm-5 col-md-5">
         <div id="map" class=" animate__animated animate__fadeIn"></div>
     </div>
 </div>
+
+
+<script src="~/js/IndexMaps.js"></script>

@@ -10,7 +10,10 @@
 
 <head>
     <script src="~/js/ViewsMaps.js"></script>
+
     <link rel="stylesheet" href="~/css/Index.css">
+    <link rel="stylesheet" href="~/css/Views.css">
+
     <script src="~/js/scroll.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVXU0B8VsfbzXeQauqduX50idZofZt7co&callback=initMap&libraries=&v=weekly" defer></script>
@@ -22,7 +25,7 @@
 </h1>
 
 <div class="row">
-    <div class="col-sm-4 col-md-4">
+    <div class="col-sm-7 col-md-7">
         <div class="jumbotron">
             @* Navigation Options *@
             <div class="row" id="top">
@@ -43,7 +46,7 @@
                 </div>
             </div>
 
-            <div class="group" id="Block">
+            <div class="group" id="MOS">
                 <h2>Mosaic District</h2>
                 <p>Urban shopping center located in Merrifield</p>
                 <span>Some great places here are:</span>
@@ -63,7 +66,7 @@
                 </div>
             </div>
 
-            <div class="group" id="Block">
+            <div class="group" id="GEO">
                 <h2>Georgetown</h2>
                 <p>A historic neighborhood and a commercial and entertainment district located in northwest Washington D.C., situated along the Potomac River.</p>
                 <span>Some great places here are:</span>
@@ -83,7 +86,7 @@
                 </div>
             </div>
 
-            <div class="group" id="Block">
+            <div class="group" id="ADA">
                 <h2>Adams Morgan</h2>
                 <p>A neighborhood located in 18th Street full of great venues</p>
                 <span>Some great places here are:</span>
@@ -103,7 +106,7 @@
                 </div>
             </div>
 
-            <div class="group" id="Block">
+            <div class="group" id="EDEN">
                 <h2>Eden Center</h2>
                 <p>Vietnamese American strip mall located near the crossroads of Seven Corners in the City of Falls Church, Virginia.</p>
                 <span>Some great thing to do:</span>
@@ -123,7 +126,7 @@
                 </div>
             </div>
 
-            <div class="group" id="Block">
+            <div class="group" id="OLD">
                 <h2>Old Town Alexandria</h2>
                 <p>Historic district along the Potomac filled with awesome places to hang out and great restaurants</p>
                 <span>Some great places here are:</span>
@@ -143,7 +146,7 @@
                 </div>
             </div>
 
-            <div class="group" id="Block">
+            <div class="group" id="TYS">
                 <h2>Tysons Corner</h2>
                 <p>An urban area located near McLean. Filled with many corporate buildings and plenty of stores</p>
                 <span>Some great places here are:</span>
@@ -163,7 +166,7 @@
                 </div>
             </div>
 
-            <div class="group" id="Block">
+            <div class="group" id="SHEN">
                 <h2>Shenandoah National Park</h2>
                 <p>National Park located south of northern Virginia</p>
                 <span>Some great things to do here are:</span>
@@ -183,7 +186,7 @@
                 </div>
             </div>
 
-            <div class="group" id="Block">
+            <div class="group" id="GREAT">
                 <h2>Great Falls Park</h2>
                 <p>Small National Park located along side the Potomac River</p>
                 <span>Some great things to do here are:</span>
@@ -203,7 +206,7 @@
                 </div>
             </div>
 
-            <div class="group" id="Block">
+            <div class="group" id="ROCK">
                 <h2>Rock Creek Park</h2>
                 <p>Large urban park that runs along the heart of DC.</p>
                 <span>Some great things to do here are:</span>
@@ -223,7 +226,7 @@
                 </div>
             </div>
 
-            <div class="group" id="Block">
+            <div class="group" id="SIL">
                 <h2>Silver Spring</h2>
                 <p>Commercial area full of shops in Maryland</p>
                 <span>Some great things to do here are:</span>
@@ -243,7 +246,7 @@
                 </div>
             </div>
 
-            <div class="group" id="Block">
+            <div class="group" id="OCC">
                 <h2>Occoquan Historic District</h2>
                 <p>Small town in Prince William County</p>
                 <span>Some great things to do here are:</span>
@@ -263,7 +266,7 @@
                 </div>
             </div>
 
-            <div class="group" id="Block">
+            <div class="group" id="FAIR">
                 <h2>Fairfax City</h2>
                 <p>Historic city located in the heart of Fairfax County</p>
                 <span>Some great things to do here are:</span>
@@ -286,7 +289,7 @@
 
         </div>
     </div>
-    <div class="col-sm-8 col-md-8">
+    <div class="col-sm-5 col-md-5">
         <div id="map"></div>
     </div>
 </div>

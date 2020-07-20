@@ -3,7 +3,8 @@
 #map {
 height: 40rem;
 width: 100%;
-border: 3px solid lightblue;
+border: 3px solid #336699;
+border-left: none;
 border-radius: 1%;
 }
 
@@ -17,36 +18,61 @@ overflow: auto;
 scroll-behavior: smooth;
 }
 
+a {
+    color: #336699 !important;
+}
+a:hover {
+    background-color: #336699 !important;
+}
+
+.solidBorder {
+    border: 3px solid #336699;
+}
+
 .buttonOn{
     background-color: #2098D1;
     color: white;
 }
-
+.btn-outline-primary{
+    color: white !important;
+    border: 2px solid lightblue;
+}
 .jumbotron{
     overflow-y: auto;
     height: 40rem;
-    border: 3px solid lightblue;
+    border: 3px solid #336699;
     padding-top: 5%;
     overflow-x: hidden;
-    
+    border-right: none;
+    background-color: white;
 }
+
 .jumbotron::-webkit-scrollbar
 {
     width: 3px;
-    background-color: #F5F5F5;
+    background-color: white;
 }
 .jumbotron::-webkit-scrollbar-thumb
 {
-    background-color: rgb(153, 153, 153);
+    background-color: #336699;
 }
 .group{
-    border: 1px solid lightblue;
+    border: 3px solid #336699;
     padding: 1rem 2rem;
     padding-top: 0;
-    border-radius: 2%;
+    border-radius: 1%;
     background-color: whitesmoke;
     margin-top: 5%;
+    transition: 0.8s;
+    color: white;
+    background-position: center;
+    background-size: cover;
+    text-shadow: 1px 1px rgb(0, 0, 0);
 }
+    .group:hover{
+        box-shadow: 0 20px 35px rgba(0,0,0,0.3);
+    }
+
 .topbtn{
     width: 100%;
     transition: 0.7s;
@@ -70,6 +96,17 @@ h2{
 .logo{
     width: 3%;
 }
+.portfolio{
+    color: lightblue;
+    transition: 0.5s;
+}
+    .portfolio:hover{
+        background-color: transparent !important;
+        font-size: large;
+        text-decoration: underline;
+        color: darkblue;
+    }
+
 @media only screen and (min-width: 768px){
     .container-fluid{
         overflow: hidden;
@@ -82,6 +119,15 @@ h2{
     .logo{
         width: 12%;
     }
+    .jumbotron{
+        border-right: 3px solid #336699;
+        border-bottom: none;
+    }
+    #map {
+        border-left: 3px solid #336699;
+        border-top: none;
+    }
+
 }
 @media only screen and (min-width: 1025px){
     .topbtn{
